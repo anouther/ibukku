@@ -1,0 +1,70 @@
+<html>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js">
+</script>
+    <link href="style.css" rel="stylesheet" type="text/css" /><script src="script.js"></script>
+<body>
+<style>body{background-image: url("ibu.jpg");background-repeat: no-repeat;background-size: 100% 100%;font-family: 'Tilt Neon', sans-serif; animation:none;transition:all .3s ease;}</style>
+
+<div id="konten"><div id="foto"><div class="image"><img id="photo" src="15.gif" width="200px" height="200px"/></div><span id="sp2"></span></div>
+
+<div id='slider'>
+  <p>Selamat datang &nbsp;<b id="kamu"></b></p>
+  <p>maaff yaa aku cuma bisa ngasih koyo ngene.. aku ga isoh yen kon nggawe koyo adek ngunu hehe</p> 
+  <p>Selamat Bertambah Umur buat yang ke 37!! 😻❤️</p>
+  <p>Sebelumee terimakasiih karna ibuk sudah mau susah payah hamil 9 bulan & melahirkan bertaruh nyawa buat akuu</p> 
+  <p>Selanjutee aku mau minta maaf yen selama ini aku ada salah neng ibuk, kesalahan seng aku sengaja perbuat ataupun ngga sengaja</p>
+  <p>Maaff wes pernah nggawe ibuk semarah kuii, maaff yen aku masih ngeyel yen dibilangii</p>
+  <p>Tapii dibalik aku seng ngeyel ikii enek aku seng sayangg banget karo ibukk, lebih dari siapapunn</p>
+  <p>Doaku..Semoga ibuk panjang umur, sehat selalu, diberikan kemudahan dari segala kesulitan, dan dilancarkan rezeki buat ibukk</p>
+  <p>Aku minta maaf jugaa yen aku belum bisa jadi anak seng dikarepke ibukk</p> 
+  <p>Aku belum bisa dadi koyo adek seng wes isoh cari uang, masakk enak & nyenengke ibukk huhu..</p>
+  <p>Aku bakal tetep sayangg karo ibukk, I love you very very muchhh ibukku sayanggg❤️</p>
+  <p>masih ada lagi, tap love nya ya! <label class='lovein' onClick="duar()">💝</label></p>
+</div><div id="contTom"><a class='button whatsapp' onClick='bukaWa();'><i class='icon whatsapp'></i>Kirim</a></div>
+</div>
+<div id="bodyblur"></div>
+
+<script>  
+var a=0,finish;
+finish = "Happy birthday sayangku♡ You are the mother figure that many people hope for";
+
+        function play() {
+          var audio = new Audio('sempurna.mp3');
+          audio.play();
+        }
+            
+ function bukaWa(){window.location = "https://t.me/pewarisw"}
+</script>
+ 
+<script type="text/javascript">            
+            var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
+            const swals = Swal.mixin({
+                allowOutsideClick: false,
+            });
+            async function mulai(){
+                var { value: nama } = await swals.fire({
+                    title: 'Siapa kamu?',
+                    input: 'text',
+                    confirmButtonText: 'next',
+                    showCancelButton: false,
+                });                           
+                if(nama){
+                	window.nama = nama;
+                    finish = finish + ", " + nama + "!";    
+                    document.getElementById("kamu").innerHTML = "" + window.nama;
+                    setTimeout(showDiv, 700);play();                      
+                } else {
+                    await swals.fire('Heh! Jangan dikosongin atuh namanya buru isi 😡');
+                    mulai();
+                }
+            }
+            mulai();
+</script>
+</body>
+</html>
